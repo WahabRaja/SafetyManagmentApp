@@ -1,0 +1,23 @@
+<resources>
+
+    <style name="MyButton" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="MerayButton" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+
+
+    <style name="HeadingsStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+</resources>

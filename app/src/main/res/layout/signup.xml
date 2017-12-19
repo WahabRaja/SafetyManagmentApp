@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+<RelativeLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/signupview"
+        android:paddingLeft="10dp"
+        android:textSize="34dp"
+        android:textColor="@color/text_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Sign Up"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <EditText
+        android:id="@+id/etemail"
+        android:paddingLeft="10dp"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:hint="Email id "
+        android:textColorHint="@color/text_white"
+        android:textColor="@color/text_white"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="100dp" />
+
+    <EditText
+        android:id="@+id/pass"
+        android:paddingLeft="10dp"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Password"
+        android:textColorHint="@color/text_white"
+        android:textColor="@color/text_white"
+        android:inputType="textPassword"
+        android:layout_below="@+id/etemail" />
+
+    <EditText
+        android:id="@+id/confpass"
+        android:paddingLeft="10dp"
+        android:inputType="textPassword"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/text_white"
+        android:textColor="@color/text_white"
+        android:hint="Confirm Password"
+        android:layout_below="@+id/pass"
+        />
+
+    <Button
+        android:id="@+id/proceedBtn"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Proceed"
+        style="@style/MerayButton"
+        android:layout_below="@+id/confpass"
+        />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:text="Enter Verification Code:"
+        android:layout_below="@+id/proceedBtn"
+        android:textColorHint="@color/text_white"
+        android:textColor="@color/text_white"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/etcode"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/text_white"
+        android:textColor="@color/text_white"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView13"
+        android:layout_marginTop="15dp"
+        android:hint="Enter Code:"
+        android:enabled="false" />
+
+    <Button
+        android:id="@+id/btnsignup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Sign Up"
+        android:enabled="false"
+        style="@style/MerayButton"
+        android:layout_below="@+id/etcode" />
+
+</RelativeLayout>
+    </ScrollView>

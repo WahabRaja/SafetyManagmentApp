@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.simplemobiletools.calculator"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/launcher"
+        android:label="@string/app_launcher_name"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
+
+
+
+        <!--//not sure-->
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.WidgetConfigureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyWidgetConfigTheme">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.AboutActivity"
+            android:label="@string/about"
+            android:parentActivityName=".activities.MainActivity"/>
+
+        <activity
+            android:name=".activities.LicenseActivity"
+            android:label="@string/third_party_licences"
+            android:parentActivityName=".activities.AboutActivity"/>
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".activities.MainActivity"/>
+
+        <receiver
+            android:name=".MyWidgetProvider"
+            android:icon="@mipmap/widget_preview">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info"/>
+        </receiver>
+
+
+        <activity android:name=".ActivitiesClass.loggedin"/>
+        <activity android:name=".ActivitiesClass.Signup" />
+        <activity android:name=".ActivitiesClass.forgetpassword" />
+        <activity android:name=".ActivitiesClass.resetpassword" />
+        <activity android:name=".mMainActivity" />
+        <activity android:name=".ActivitiesClass.MaskLayout" />
+        <activity android:name=".ActivitiesClass.AboutAntiTheftlayout" />
+        <activity android:name=".ActivitiesClass.TermsandConditionlayout" />
+        <!--<activity-alias
+            android:name="calculator"
+            android:enabled="true"
+            android:icon="@mipmap/launcher"
+            android:label="@string/app_Calculator"
+            android:targetActivity=".activities.MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name="antitheftapp"
+            android:enabled="false"
+            android:icon="@mipmap/antitheficon"
+            android:label="@string/app_AntiThef"
+            android:targetActivity=".mMainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>-->
+        <receiver
+            android:name="AdminReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin"/>
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+                <action android:name="android.app.action.ACTION_PASSWORD_CHANGED"/>
+                <action android:name="android.app.action.ACTION_PASSWORD_FAILED"/>
+                <action android:name="android.app.action.ACTION_PASSWORD_SUCCEEDED"/>
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name=".LocationService"></service>
+    </application>
+</manifest>

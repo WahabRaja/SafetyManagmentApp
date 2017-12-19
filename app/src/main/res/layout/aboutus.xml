@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="24dp"
+    android:text="About Anti-TheftApp"
+    android:layout_marginTop="10dp"
+    android:textStyle="bold"
+    android:layout_centerHorizontal="true"/>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    android:textSize="16dp"
+    android:text="  This application is for security purpose.This application will provide you security to your content saved in your phone.This application also update you the location of device through your Email address.
+
+    When a smart phone is lost, misplaced or been stolen the owner of the smart phone will be notified by the help of an email that email will contain the backup file of the user as well as the location of the device that is being stolen or not found. The email is going to be generated through our application named as “Anti-Mobile theft”.Our application will maintain the backup of the data such as contacts, photos and videos."
+    />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
+        android:id="@+id/aboutOk"
+        android:layout_centerHorizontal="true"
+        android:text="Okay"/>
+</RelativeLayout>

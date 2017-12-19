@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/settings_scrollview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/settings_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:text="Pin Setting"
+    android:textSize="38dp"
+    android:id="@+id/mainText1"
+    android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mainText1"
+        android:id="@+id/hintext"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:hint="(Enter your Old Pin if you didnot configure
+        your pin enter '1256')"
+        />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/hintext"
+            android:layout_marginTop="20dp"
+            android:hint="Enter Old Pin"
+            android:id="@+id/OldPin"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/OldPin"
+            android:layout_marginTop="20dp"
+            android:hint="Enter New Pin"
+            android:id="@+id/NewPin"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NewPin"
+            android:text="Submit"
+            android:layout_marginTop="20dp"
+            android:id="@+id/PinSubmitBtn"
+            style="@style/MerayButton"/>
+        <!--<RelativeLayout
+            android:id="@+id/settings_dark_theme_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/settings_padding"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/activity_margin">
+
+            <TextView
+                android:id="@+id/settings_dark_theme_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/settings_padding"
+                android:text="@string/dark_theme"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/settings_dark_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:clickable="false"/>
+
+        </RelativeLayout>-->
+    </RelativeLayout>
+</ScrollView>
